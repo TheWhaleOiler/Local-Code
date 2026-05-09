@@ -10,13 +10,12 @@ import sys
 import json
 from pathlib import Path
 
+from env import OLLAMA_HOST
+
 
 DEFAULT_MODEL = "ministral-3:14b" or "llama3.1:8b" or "phi3.5"
 MAX_CONTEXT = 4096
 COMPRESSION_THRESHOLD = 0.75  # 75%
-
-OLLAMA_HOST = "http://localhost:11434"
-
 
 
 COMPRESSION_PROMPT = """Create a concise markdown summary with these headers:
